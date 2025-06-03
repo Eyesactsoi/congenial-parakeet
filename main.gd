@@ -4,7 +4,8 @@
 #intializes everything from the godot folder
 #region
 
-var character = 3
+var character = 3;
+var momentum = 0;
 
 
 #endregion
