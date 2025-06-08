@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://6oqls0qja43n"]
 
-[ext_resource type="Texture2D" uid="uid://cytpn7qw5gep3" path="res://Test_Area_Skatedash.png" id="1_u52ul"]
-[ext_resource type="Script" uid="uid://c8ulvy5negist" path="res://level.gd" id="1_vonw3"]
+[ext_resource type="Texture2D" uid="uid://cytpn7qw5gep3" path="res://Level/Test_Area_Skatedash.png" id="1_u52ul"]
+[ext_resource type="Script" uid="uid://c8ulvy5negist" path="res://Level/level.gd" id="1_vonw3"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_vonw3")
