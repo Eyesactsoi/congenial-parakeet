@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dp55miopdrhni"]
 
-[ext_resource type="Script" uid="uid://banjimv5neuq" path="res://player.gd" id="1_kpjcp"]
-[ext_resource type="Texture2D" uid="uid://cxqiwo8ykg1xy" path="res://Skatedash.png" id="2_kne1u"]
+[ext_resource type="Script" path="res://player.gd" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://cxqiwo8ykg1xy" path="res://Player/Skatedash.png" id="2_kne1u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sh265"]
 animations = [{
