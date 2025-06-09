@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://dp55miopdrhni"]
+
+[ext_resource type="Script" uid="uid://53wa2d0klq3e" path="res://Player.gd" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://cxqiwo8ykg1xy" path="res://Skatedash.png" id="2_kne1u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpjcp"]
+size = Vector2(20, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sh265"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kne1u")
+}],
+"loop": true,
+"name": &"standing",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_kpjcp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kpjcp")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Camera" type="Camera2D" parent="."]
+offset = Vector2(0, -44)
+zoom = Vector2(3, 3)
+limit_left = -715
+limit_top = -250
+limit_right = 1425
+limit_bottom = 690
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_sh265")
+animation = &"standing"
+metadata/_edit_group_ = true
