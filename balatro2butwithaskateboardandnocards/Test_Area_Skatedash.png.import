@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cytpn7qw5gep3"
-path="res://.godot/imported/Test_Area_Skatedash.png-2afad31785559f228f0b84836eadc6a7.ctex"
+path="res://.godot/imported/Test_Area_Skatedash.png-c0aef8d520b9a29025b5383fabb6039e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level/Test_Area_Skatedash.png"
-dest_files=["res://.godot/imported/Test_Area_Skatedash.png-2afad31785559f228f0b84836eadc6a7.ctex"]
+source_file="res://Test_Area_Skatedash.png"
+dest_files=["res://.godot/imported/Test_Area_Skatedash.png-c0aef8d520b9a29025b5383fabb6039e.ctex"]
 
 [params]
 
