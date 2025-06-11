@@ -1,0 +1,29 @@
+func get_input(delta):
+	# Taking all the inputs from the player
+	velocity.x = 0
+	var right = Input.is_action_pressed('move_right')
+	var left = Input.is_action_pressed('move_left')
+	var push = Input.is_action_pressed('push')
+	var mod = Input.is_action_pressed('shifter')
+	var jump = Input.is_action_just_pressed('jump')
+	# if the player is going to jump
+	if jump and is_on_floor():
+		velocity.y = jumpVelocity
+	if right and push:
+		velocity.x = move_toward(velocity.x, right, delta * accelerationSpeed)
+	if left and push:
+		velocity.x = (move_toward(velocity.x, left, delta * accelerationSpeed)) * -1
+		# Gets Directional Input
+	#var direction := Input.get_axis("move_left" + action_suffix, "move_right" + action_suffix) * speed
+	#velocity.x = move_toward(velocity.x, direction, delta + 2.7)
+
+	if not is_zero_approx(velocity.x):
+		if velocity.x > 0.0:
+			sprite.scale.x = 1.0
+		else:
+			sprite.scale.x = -1.0
+	
+     
+    	# Adds the half push for the character
+	#if Input.is_action_just_pressed("move_left") or Input.is_action_just_pressed("move_right") and Input.is_physical_key_pressed(KEY_SHIFT):
+	#	velocity.x = move_toward(velocity.x, direction, delta + .5)
