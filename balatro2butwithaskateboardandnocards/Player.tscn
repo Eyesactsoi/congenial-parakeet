@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cxqiwo8ykg1xy" path="res://Skatedash.png" id="2_kne1u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpjcp"]
-size = Vector2(20, 32)
+size = Vector2(15, 30)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sh265"]
 animations = [{
@@ -21,6 +21,7 @@ animations = [{
 script = ExtResource("1_kpjcp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_kpjcp")
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
@@ -39,3 +40,5 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_sh265")
 animation = &"standing"
 metadata/_edit_group_ = true
+
+[node name="PushCooldown" type="Timer" parent="AnimatedSprite2D"]
