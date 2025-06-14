@@ -5,11 +5,11 @@ var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 # Intializing the export ones
 @onready var camera := $Camera as Camera2D
-@onready var sprite := $AnimatedSprite2D as AnimatedSprite2D
+@onready var sprite := $Sprite2D as Sprite2D
 @onready var pushcooldown := $Timer as Timer
 @onready var jumptimer := $Timer2 as Timer
 @export var action_suffix := ""
-
+   
 # Intializing our variables
 const speed = 425
 const accelerationSpeed = speed * 6.0
