@@ -32,3 +32,9 @@ one_way_collision_margin = 40.4
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(128, -64, 128, -48, 192, -48, 192, -64)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(640, -32, 704, -96, 704, -32)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(64, -96, 32, -32, 96, -32)
