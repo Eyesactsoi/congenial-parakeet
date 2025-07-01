@@ -30,9 +30,11 @@ func _physics_process(delta: float) -> void:
 	# Fall
 	velocity.y = minf(terminalVelocity, (velocity.y + gravity * delta) - 7)
 	move()
-#	print(velocity.x)
+	print(velocity.x)
 #	print(get_floor_angle())
-	print(jumptimer.time_left)
+#	print(jumptimer.time_left)
+	print(get_floor_angle())
+	print(counter)
 	counter = fakeMomentum(counter)
 	move_and_slide()
 
@@ -40,17 +42,36 @@ func _ready():
 	print("hi")
 
 func fakeMomentum(counter):
+	counter = counter
+	var angle = get_floor_angle()
+	if velocity.x == 0 and counter > 15:
+		counter = 0
+		return counter
+	if angle > 0.0 and angle < 1 or angle < 0.0 and angle > -1.0:
+		if counter > 15:
+			if angle < 0.1 and angle > 0 or angle < -0.1 and angle > -0.2:
+				if angle > 0:
+					velocity.x = round(velocity.x - 5)
+				elif angle < 0:
+					velocity.x = round(velocity.x + 5)
+			elif angle < 0.5 and angle > 0.1 or angle < -0.1 and angle > -0.5:
+				if angle > 0:
+					velocity.x = round(velocity.x + 15)
+				elif angle < 0:
+					velocity.x = round(velocity.x + 15)
+			counter = 0
+			return counter
 	if counter > 15:
 		if velocity.x > 50 and velocity.x > 0 or velocity.x < 0:
 			if velocity.x > 0:
 				velocity.x = round(velocity.x - 15)
 			elif velocity.x < 0:
 				velocity.x = round(velocity.x + 15)
-		if velocity.x < 10 and velocity.x > 0 or velocity.x < 0:
-			if velocity.x > 0:
-				velocity.x = round(velocity.x - 5)
-			elif velocity.x < 0:
-				velocity.x = round(velocity.x + 5)
+			if velocity.x > 10 and velocity.x > 0 or velocity.x < 0:
+				if velocity.x > 0:
+					velocity.x = round(velocity.x - 5)
+				elif velocity.x < 0:
+					velocity.x = round(velocity.x + 5)
 		elif velocity.x > 0 or velocity.x < 0:
 			if velocity.x > 0:
 				velocity.x = round(velocity.x - 10)
