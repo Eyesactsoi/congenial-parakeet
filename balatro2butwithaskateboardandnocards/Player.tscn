@@ -955,6 +955,11 @@ autostart = true
 [node name="Timer2" type="Timer" parent="."]
 one_shot = true
 
+[node name="Timer3" type="Timer" parent="."]
+wait_time = 3.5
+autostart = true
+ignore_time_scale = true
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_ffn1m")

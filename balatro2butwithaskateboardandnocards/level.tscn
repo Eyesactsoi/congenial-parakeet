@@ -38,3 +38,12 @@ polygon = PackedVector2Array(640, -32, 704, -96, 704, -32)
 
 [node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(64, -96, 32, -32, 96, -32)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-256, -128, -128, -128, -128, -112, -256, -112)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-224, -32, -160, -32, -160, 32, -224, 32)
+disabled = true
